@@ -5,14 +5,15 @@
 using namespace std;
 int main(void)
 {
-	int n, num;
+	int n;
+	long long num;
 	scanf("%d", &n);
 
-	vector<int> v1;
-	vector<int> v2;
+	vector<long long> v1;
+	vector<long long> v2;
 	for (int i = 0; i < n - 1; i++)
 	{
-		scanf("%d", &num);
+		scanf("%lld", &num);
 		v1.push_back(num);
 	}
 	for (int i = 0; i < n; i++)
@@ -20,9 +21,8 @@ int main(void)
 		scanf("%d", &num);
 		v2.push_back(num);
 	}
-	int price = v2[0];
-	long long int sum = v2[0] * v1[0];
-
+	long long price = v2[0];
+	long long sum = v2[0] * v1[0];
 	for (int i = 1; i < n - 1; i++)
 	{
 		if (v2[i] > price)
